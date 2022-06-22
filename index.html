@@ -130,18 +130,19 @@
                         <h2 class="title">Đăng kí dùng thử <span>Google Workspace</span></h2>
                         <p class="desc"><span>Miễn phí 7 ngày</span></p>
                     </div>
-                    <form action="" class="form">
+                    <form class="form" id="form_submit">
+                        <div class="sign_up_for_a_quote_alert"></div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Họ và tên">
+                            <input type="text" name="your_name" class="form-control" placeholder="Họ và tên">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Số điện thoại">
+                            <input type="text" name="your_phone" class="form-control" placeholder="Số điện thoại">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" name="your_email" class="form-control" placeholder="Email">
                         </div>
                         <div class="form-group form-btn">
-                            <button class="btn">Đăng ký ngay</button>
+                            <button type="submit" class="btn">Đăng ký ngay</button>
                         </div>
                     </form>
                 </div>
@@ -298,65 +299,59 @@
             </div>
         </div>
     </section>
-
-    <footer id="footer">
-        <div class="container">
-            <div class="box">
-                <h4>CÔNG TY CỔ PHẦN THƯƠNG MẠI ĐIỆN TỬ OJO</h4>
-                <p>Mã số doanh nghiệp: 0109915439</p>
-            </div>
-        </div>
-    </footer>
     
     <script src="./libs/jquery-3.5.1.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".btn-submit").on("click", function() {
-                let f_store = $("input[name=f_store]");
-                let f_name = $("input[name=f_name]");
-                let f_phone = $("input[name=f_phone]");
-                let f_email = $("input[name=f_email]");
-                let f_province = $("input[name=f_province]");
-                let f_content = $("input[name=f_content]");
-                // console.log('f_store', f_store);
-
-                if (f_store.val() == '') {
-                    alert('Vui lòng nhập tên cửa hàng/ tên thương hiệu');
-                    f_store.focus();
-                } else if (f_name.val() == '') {
-                    alert('Vui lòng nhập tên người liên hệ');
-                    f_name.focus();
-                } else if (f_phone.val() == '') {
-                    alert('Vui lòng nhập số điện thoại');
-                    f_phone.focus();
-                }else {
-
-                    var formData = {
-                        'entry.1814673413': f_store.val(),
-                        'entry.1168515573': f_name.val(),
-                        'entry.1677389494': f_phone.val(),
-                        'entry.1166002564': f_email.val(),
-                        'entry.1178714557': f_province.val(),
-                        'entry.974174694': f_content.val(),
-                    };
-                    $.ajax({
-                        url: "https://docs.google.com/forms/d/e/1FAIpQLSe4SACLqv6JlkzjQxPG6JHwMCVMoe0Gv4JzcURQfb06h5rmvA/formResponse",
-                        data: formData,
-                        type: "POST",
-                        dataType: "xml"
-                    }).always(function (msg) {
-                        alert('Gửi đi thành công, yêu cầu của quý khách đang được xử lý! Xin cảm ơn!');
-                        f_store.val("");
-                        f_name.val("");
-                        f_phone.val("");
-                        f_email.val("");
-                        f_province.val("");
-                        f_content.val("");
-                    });
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            // console.log(window.location.href);
+            $("#form_submit").submit(function (event) {
+                event.preventDefault();
+                var your_name = $("input[name=your_name]").val();
+                var your_phone = $("input[name=your_phone]").val();
+                var your_email = $("input[name=your_email]").val();
+                // var v = grecaptcha.getResponse();
+    
+                var url = "https://script.google.com/macros/s/AKfycbxd_QSB1JRXstrJzYMaCnoQ7B-ABXMDB-KoFFweDx4Jp-uara8/exec";
+    
+                var data = {
+                    name: your_name,
+                    phone: your_phone,
+                    email: your_email
+                };
+                // console.log(data);
+                if (your_name == '' || your_email == '' || your_phone == '') {
+                    $('.sign_up_for_a_quote_alert').html('<p class="text-danger alert alert-danger">You have not entered all the fields.</p>');
+                } else {
+                    // $(".loading-img").css('display', 'inline-block');
+                    // if(v.length == 0) {
+                    //     document.getElementById('captcha').innerHTML="You cannot leave the Captcha Code blank";
+                    //     return false;
+                    // } else {
+                        $.ajax({
+                            url: url,
+                            method: "GET",
+                            dataType: "json",
+                            data: data,
+                            success: function (data) {
+                                $('.sign_up_for_a_quote_alert').html('<p class="text-success">Your information has been submitted successfully!</p>');
+                                // $(".loading-img").css('display', 'none');
+                                $("input[name=your_name]").val("");
+                                $("input[name=your_phone]").val("");
+                                $("input[name=your_email]").val("");
+                            },
+                            error: function (e) {
+                                // $(".loading-img").css('display', 'none');
+                                console.log(e)
+                            }
+    
+                        });
+                    // }
                 }
             });
-        })
+        });
+    
     </script>
+    
 </body>
 </html>
