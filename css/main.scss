@@ -398,10 +398,10 @@ html, body {
     background: url('./../imgs/bg.png') no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 120px 0;
+    padding: 120px 0 200px;
     .box-title {
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
         .title {
             font-size: 35px;
             color: $red;
@@ -461,7 +461,7 @@ html, body {
                     }
                     .btn-c {
                         margin-top: 8px;
-                        border-radius: 10px;
+                        border-radius: 6px;
                         background-color: $btn;
                         padding: 6px 12px;
                         color: #fff;
@@ -477,13 +477,29 @@ html, body {
                     }
                     li {
                         box-shadow: 0px 15px 10px -15px #555;
-                        padding: 24px 0;
                         &:last-child {
                             box-shadow: none;
+                        }
+                        height: 76px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        p {
+                            margin-bottom: 0;
                         }
                     }
                 }
             }       
+        }
+        .fix-img1 {
+            position: absolute;
+            top: 90%;
+            left: 300px;
+        }
+        .fix-img2 {
+            position: absolute;
+            top: 41px;
+            right: -23px;
         }
     }
     &.box2 {
@@ -620,6 +636,7 @@ html, body {
         }
     }
     &.box4 {
+        padding-bottom: 300px;
         .box-title {
             .title {
                 color: $btn;
@@ -655,6 +672,16 @@ html, body {
                     }
                 }
             }
+        }
+        .fix-img1 {
+            position: absolute;
+            top: 80%;
+            left: 240px;
+        }
+        .fix-img2 {
+            position: absolute;
+            top:80%;
+            right: 340px;
         }
     }
 
@@ -711,6 +738,16 @@ html, body {
         }
     }
     &.box6 {
+        padding: 0 0 40px;
+        .box-title {
+            background-color: #23affc;
+            .title {
+                font-size: 35px;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 16px 0;
+            }
+        }
         .list2 {
             width: 1140px;
             margin: 0 auto;
@@ -743,6 +780,131 @@ html, body {
                         line-height: 25px;
                         color: #000000;
                         font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    &.box-workspace {
+        background: url("./../imgs/bg-head.png") no-repeat;
+        padding: 0;
+        .box-content {
+            background: #23affb;
+            height: 220px;
+            .container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .box-group {
+                width: calc(100% - 300px);
+                .title {
+                    font-size: 27px;
+                    color: #ffffff;
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+                .desc {
+                    font-size: 22px;
+                    color: #ffffff;
+                    font-weight: 500;
+                }
+                .btn-group {
+                    margin-top: 32px;
+                    a {
+                        font-size: 20px;
+                        font-weight: 500;
+                        border-radius: 8px;
+                        color: #ffffff;
+                        padding: 10px 24px;
+                        margin-left: 60px;
+                        &.btn-success {
+                            background-color: #00a051;
+                        }
+                        &.btn-danger {
+                            background-color: #ea4335;
+                        }
+                    }
+                }
+            }
+            .fix-img {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        header {
+            height: 80px;
+            .container {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                a {
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .navb {
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0;
+                li {
+                    width: 20%;
+                    text-align: center;
+                    a {
+                        font-size: 23px;
+                        line-height: 31px;
+                        color: #ea4335;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .box-title {
+            margin-bottom: 28px;
+            .title {
+                color: #000;
+            }
+        }
+        .list {
+            flex-wrap: wrap;
+            .item {
+                width: 432px;
+                height: 152px;
+                border-radius: 10px;
+                filter: drop-shadow(4.774px 5.119px 4.5px rgba(0,0,0,0.11));
+                background-color: #ffffff;
+                border: 0.6px solid #555555;
+                margin-bottom: 20px;
+                .content {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    padding: 20px;
+                    .img {
+                        width: 100px;
+                        img {
+                            // width: 80%;
+                        }
+                    }
+                    .text {
+                        width: calc(100% - 100px);
+                        padding-left: 40px;
+                        .title {
+                            font-size: 22px;
+                            color: #000000;
+                            font-weight: bold;
+                            margin-bottom: 4px;
+                        }
+                        .desc {
+                            font-size: 18px;
+                            color: #000000;
+                        }
                     }
                 }
             }
