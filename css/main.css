@@ -441,7 +441,8 @@ html, body {
 .box.box1 .box-title .title span {
   background: #e53934;
   color: #fff;
-  padding: 2px 12px;
+  padding: 4px 16px;
+  border-radius: 6px;
 }
 .box.box1 .list {
   display: -webkit-box;
@@ -610,6 +611,8 @@ html, body {
   position: absolute;
   top: 90%;
   left: 300px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 @media (max-width: 1200px) {
   .box.box1 .fix-img1 {
@@ -831,6 +834,7 @@ html, body {
   background: #2095f3;
   color: #fff;
   padding: 4px 8px;
+  border-radius: 6px;
 }
 .box.box3 .block .child:last-child .form {
   width: 496px;
@@ -1245,6 +1249,7 @@ html, body {
   }
   .box.box6 .list2 .item .content .title {
     font-size: 28px;
+    line-height: 36px;
   }
 }
 @media (max-width: 1400px) {
@@ -1365,7 +1370,7 @@ html, body {
     font-size: 22px;
   }
   .box.box-workspace .box-content .box-group .desc {
-    font-size: 18px;
+    font-size: 16px;
   }
   .box.box-workspace .box-content .box-group .btn-group {
     margin-top: 28px;
@@ -1545,6 +1550,7 @@ html, body {
   color: #000000;
   font-weight: bold;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 .box.box-workspace .list .item .content .text .desc {
   font-size: 18px;
@@ -1615,4 +1621,15 @@ html, body {
   .box.box-workspace .list .item {
     width: 100%;
   }
+}
+
+.sticky_scroll {
+  position: fixed;
+  top: 0;
+  right: 16px;
+  z-index: 9999;
+  margin-top: 16px !important;
+}
+.sticky_scroll a {
+  margin-left: 16px !important;
 }

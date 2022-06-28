@@ -38,9 +38,9 @@
         <div class="box-content">
             <div class="container">
                 <div class="box-group">
-                    <h4 class="title">Google Workspace - Giải pháp tối ưu hóa quy trình làm việc cho doanh nghiệp</h4>
+                    <h1 class="title">Google Workspace - Giải pháp tối ưu hóa quy trình làm việc cho doanh nghiệp</h1>
                     <p class="desc">Tự hào là Đối tác cao cấp chính thức đầu tiên của Google tại Việt Nam, CleverAds hiện giúp 200+ khách hàng doanh nghiệp sử dụng hiệu quả bộ sản phẩm Google Workspace giúp nâng cao năng suất làm việc.</p>
-                    <div class="btn-group">
+                    <div class="btn-group" id="fixBtn">
                         <a href="#" class="btn-success">Dùng thử miễn phí</a>
                         <a href="#" class="btn-danger">Hotline tư vấn </a>
                     </div>
@@ -53,15 +53,15 @@
         <div class="container">
             <nav class="navb">
                 <ul>
-                    <li><a href="#">Bộ ứng dụng <br>
+                    <li><a href="#bo-ung-dung-google-workspace">Bộ ứng dụng <br>
                         Google Workspace</a></li>
-                    <li><a href="#">Tính năng và lợi ích</a></li>
-                    <li><a href="#"> Bảng giá dịch vụ</a></li>
-                    <li><a href="#">Tại sao chọn CleverAds?</a></li>
-                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#tinh-nang-va-loi-ich">Tính năng và lợi ích</a></li>
+                    <li><a href="#bang-gia-dich-vu"> Bảng giá dịch vụ</a></li>
+                    <li><a href="#tai-sao-chon-cleverads">Tại sao chọn CleverAds?</a></li>
+                    <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
                 </ul>
             </nav>
-            <div class="box-title">
+            <div class="box-title" id="bo-ung-dung-google-workspace">
                 <h3 class="title">Bộ ứng dụng Google Workspace</h3>
             </div>
             <div class="list">
@@ -177,7 +177,7 @@
         </div>
     </section>
 
-    <section id="" class="box box6">
+    <section id="tinh-nang-va-loi-ich" class="box box6">
         <div class="box-title">
             <h3 class="title">TÍNH NĂNG VÀ LỢI ÍCH</h3>
         </div>
@@ -251,7 +251,7 @@
         </div>
     </section>
 
-    <section id="" class="box box1">
+    <section id="bang-gia-dich-vu" class="box box1">
         <div class="container">
             <div class="box-title">
                 <h2 class="title"><span>Bảng giá dịch vụ</span></h2>
@@ -315,7 +315,7 @@
         </div>
     </section>
 
-    <section id="" class="box box2">
+    <section id="tai-sao-chon-cleverads" class="box box2">
         <div class="container">
             <div class="box-title">
                 <h2 class="title">TẠI SAO NÊN CHỌN CLEVERADS LÀ ĐỐI TÁC CUNG CẤP DỊCH VỤ?</h2>
@@ -432,7 +432,7 @@
     </section>
 
 
-    <section id="" class="box box4">
+    <section id="cau-hoi-thuong-gap" class="box box4">
         <div class="container">
             <div class="box-title">
                 <h2 class="title">CÂU HỎI THƯỜNG GẶP</h2>
@@ -479,8 +479,33 @@
     
     
     <script src="./libs/jquery-3.5.1.min.js"></script>
+    <script src="./libs/easing/easing.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+
+            $(document).on('click', 'a[href^="#"]', function (event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 1000);
+            });
+
+            var scroll_load = Math.floor($(window).scrollTop());
+            console.log('aa', scroll_load)
+            if (scroll_load > 300) {
+                $('#fixBtn').addClass('sticky_scroll');
+            } else {
+                $('#fixBtn').removeClass('sticky_scroll');
+            }
+            $(window).scroll(function () {
+                console.log('scroll', scroll)
+                var scroll = Math.floor($(window).scrollTop());
+                if (scroll > 300) {
+                    $('#fixBtn').addClass('sticky_scroll');
+                } else {
+                    $('#fixBtn').removeClass('sticky_scroll');
+                }
+            });
             
             // console.log(window.location.href);
             $("#form_submit").submit(function (event) {
