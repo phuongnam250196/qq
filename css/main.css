@@ -682,9 +682,9 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .box.box2 .list .item .group-title {
   text-align: center;
@@ -692,16 +692,19 @@ html, body {
   letter-spacing: 0px;
   color: #070101;
 }
-.box.box2 .list .item .group-title .ico {
+.box.box2 .list .item .group-title .item-ico {
+  height: 100px;
+}
+.box.box2 .list .item .group-title .item-ico .ico {
   margin-bottom: 20px;
 }
 .box.box2 .list .item .group-title .title {
   font-size: 24px;
   letter-spacing: -1px;
-  line-height: 37px;
   color: #43b7dd;
   font-weight: 800;
   margin-bottom: 24px;
+  height: 60px;
 }
 .box.box2 .list .item .group-title .desc {
   font-size: 15px;
@@ -710,6 +713,7 @@ html, body {
   color: #141414;
   font-weight: bold;
   margin-bottom: 32px;
+  height: 60px;
 }
 .box.box2 .list .item .group-title .line {
   width: 263px;
@@ -727,7 +731,7 @@ html, body {
   .box.box2 .list .item .group-title {
     font-size: 15px;
   }
-  .box.box2 .list .item .group-title .ico {
+  .box.box2 .list .item .group-title .item-ico .ico {
     margin-bottom: 20px;
   }
   .box.box2 .list .item .group-title .title {
@@ -749,7 +753,10 @@ html, body {
   .box.box2 .list .item .group-title {
     font-size: 15px;
   }
-  .box.box2 .list .item .group-title .ico {
+  .box.box2 .list .item .group-title .item-ico {
+    height: 84px;
+  }
+  .box.box2 .list .item .group-title .item-ico .ico {
     margin-bottom: 20px;
   }
   .box.box2 .list .item .group-title .title {
@@ -770,16 +777,42 @@ html, body {
     width: 32%;
     padding: 20px;
   }
-  .box.box2 .list .item .group-title .ico {
+  .box.box2 .list .item .group-title .item-ico {
+    height: 72px;
+  }
+  .box.box2 .list .item .group-title .item-ico .ico {
     margin-bottom: 20px;
     width: 40px;
   }
   .box.box2 .list .item .group-title .title {
     font-size: 16px;
+    height: 48px;
   }
   .box.box2 .list .item .group-title .desc {
     font-size: 12px;
     margin-bottom: 32px;
+  }
+}
+@media (max-width: 992px) {
+  .box.box2 .list .item {
+    width: 32%;
+    padding: 20px;
+  }
+  .box.box2 .list .item .group-title .item-ico {
+    height: 72px;
+  }
+  .box.box2 .list .item .group-title .item-ico .ico {
+    margin-bottom: 20px;
+    width: 40px;
+  }
+  .box.box2 .list .item .group-title .title {
+    height: 60px;
+  }
+  .box.box2 .list .item .group-title .title br {
+    display: none;
+  }
+  .box.box2 .list .item .group-title .desc br {
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -1250,6 +1283,7 @@ html, body {
   .box.box6 .list2 .item .content .title {
     font-size: 28px;
     line-height: 36px;
+    font-weight: 500;
   }
 }
 @media (max-width: 1400px) {
