@@ -1475,6 +1475,11 @@ html, body {
   display: inline-block;
   margin-right: 20px;
 }
+@media (max-width: 768px) {
+  .box.box-workspace header .container a img {
+    width: 80%;
+  }
+}
 .box.box-workspace .navb ul {
   list-style: none;
   display: -webkit-box;
@@ -1662,8 +1667,31 @@ html, body {
   top: 0;
   right: 16px;
   z-index: 9999;
-  margin-top: 16px !important;
+  margin-top: 22px !important;
 }
 .sticky_scroll a {
   margin-left: 16px !important;
+}
+@media (max-width: 480px) {
+  .sticky_scroll {
+    top: unset;
+    bottom: 16px;
+  }
+  .sticky_scroll a {
+    font-size: 14px !important;
+    padding: 6px 12px !important;
+    border-radius: 4px;
+    margin-right: 8px !important;
+  }
+}
+
+.fix-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }

@@ -500,16 +500,20 @@
             console.log('aa', scroll_load)
             if (scroll_load > 300) {
                 $('#fixBtn').addClass('sticky_scroll');
+                $(".box.box-workspace header").addClass("fix-top");
             } else {
                 $('#fixBtn').removeClass('sticky_scroll');
+                $(".box.box-workspace header").removeClass("fix-top");
             }
             $(window).scroll(function () {
                 console.log('scroll', scroll)
                 var scroll = Math.floor($(window).scrollTop());
                 if (scroll > 300) {
                     $('#fixBtn').addClass('sticky_scroll');
+                    $(".box.box-workspace header").addClass("fix-top");
                 } else {
                     $('#fixBtn').removeClass('sticky_scroll');
+                    $(".box.box-workspace header").removeClass("fix-top");
                 }
             });
             
