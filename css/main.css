@@ -1086,6 +1086,14 @@ html, body {
   width: 100%;
   height: auto;
 }
+.box.box3 .video {
+  height: 400px;
+}
+@media (max-width: 480px) {
+  .box.box3 .video {
+    height: 240px;
+  }
+}
 .box.box3 .block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2078,7 +2086,7 @@ html, body {
 ul.fixed-icon {
   position: fixed;
   right: 15px;
-  bottom: 60px;
+  bottom: 120px;
   list-style: none;
 }
 

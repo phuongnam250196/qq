@@ -1045,6 +1045,12 @@ html, body {
             width: 100%;
             height: auto;
         }
+        .video {
+            height: 400px;
+            @media (max-width: 480px) {
+                height: 240px;
+            }
+        }
         .block {
             display: flex;
             justify-content: space-between;
@@ -2031,7 +2037,7 @@ html, body {
 ul.fixed-icon {
     position: fixed;
     right: 15px;
-    bottom: 60px;
+    bottom: 120px;
     list-style: none;
   }
   
