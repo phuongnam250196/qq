@@ -52,7 +52,7 @@
                 <li><a href="#bang-gia-dich-vu"> Bảng giá dịch vụ</a></li>
                 <li><a href="#tai-sao-chon-cleverads">Tại sao chọn CleverAds?</a></li>
                 <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
-                <li><a href="#form_submit" class="btn">Dùng thử miễn phí</a> <a href="tel:0919018448" target="_blank"
+                <li><a href="#contact" class="btn">Dùng thử miễn phí</a> <a href="tel:0919018448" target="_blank"
                         class="btn">Hotline tư vấn</a></li>
             </ul>
         </div>
@@ -74,7 +74,7 @@
                         giúp 200+ khách hàng doanh nghiệp sử dụng hiệu quả bộ sản phẩm Google Workspace giúp nâng cao
                         năng suất làm việc.</p>
                     <div class="btn-group" id="fixBtn">
-                        <a href="#form_submit" class="btn-success">Dùng thử miễn phí</a>
+                        <a href="#contact" class="btn-success">Dùng thử miễn phí</a>
                         <a href="tel:0919018448" target="_blank" class="btn-danger">Hotline tư vấn </a>
                     </div>
                 </div>
@@ -323,7 +323,7 @@
                     <div class="popular">Phổ biến nhất</div>
                     <div class="group-title">
                         <h4 class="title">Business Standard</h4>
-                        <p class="num">$3.00 USD</p>
+                        <p class="num">$6.00 USD</p>
                         <p class="price">$12</p>
                         <p class="desc">/người dùng/năm</p>
                         <p class="desc2">* Đặc biệt giảm giá 50% cho 6 tháng đầu tiên sử dụng sản phẩm</p>
@@ -353,7 +353,7 @@
 
                     <div class="group-title">
                         <h4 class="title">Business Plus</h4>
-                        <p class="num">$5.40 USD</p>
+                        <p class="num">$9.00 USD</p>
                         <div class="price">$18</div>
                         <p class="desc">/người dùng/năm</p>
                         <p class="desc2">* Đặc biệt giảm giá 50% cho 6 tháng đầu tiên sử dụng sản phẩm</p>
@@ -482,7 +482,7 @@
         </div>
     </section> -->
 
-    <section id="" class="box box3">
+    <section id="contact" class="box box3">
         <div class="container">
             <div class="block">
                 <div class="child">
@@ -591,6 +591,38 @@
         </div>
     </footer>
 
+    <!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "127363750622357");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v14.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
     <ul class="fixed-icon">
 
         <li>
@@ -633,7 +665,7 @@
 
         <li>
 
-            <a data-fancybox data-src="#contact" href="#form_submit" style="text-decoration: none">
+            <a data-fancybox data-src="#contact" href="#contact" style="text-decoration: none">
 
                 <i class="fas fa-envelope"></i>
 
