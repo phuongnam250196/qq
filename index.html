@@ -16,12 +16,12 @@
     <meta property="og:description"
         content="Tự hào là Đối tác Cao Cấp đầu tiên của Google tại Việt Nam, cung cấp giải pháp Google Workspace cho hơn 200 doanh nghiệp đủ mọi quy mô và lĩnh vực. Với gần 15 năm kinh nghiệm và đội ngũ chuyên nghiệp, CleverAds sẽ giúp Quý doanh nghiệp chuyển đổi số công việc hiệu quả.">
     <meta property="og:image" content="./imgs/i_1.png">
-    <meta property="og:url" content="#">
+    <meta property="og:url" content="https://workspace.cleverads.vn/">
     <meta name="twitter:title" content=" CleverAds.vn - Giải pháp Google Workspace doanh nghiệp" />
     <meta name="twitter:description"
         content="Tự hào là Đối tác Cao Cấp đầu tiên của Google tại Việt Nam, cung cấp giải pháp Google Workspace cho hơn 200 doanh nghiệp đủ mọi quy mô và lĩnh vực. Với gần 15 năm kinh nghiệm và đội ngũ chuyên nghiệp, CleverAds sẽ giúp Quý doanh nghiệp chuyển đổi số công việc hiệu quả." />
     <meta name="twitter:image" content="./imgs/i_1.png" />
-    <meta name="twitter:url" content="#" />
+    <meta name="twitter:url" content="https://workspace.cleverads.vn/" />
     <meta name="twitter:card"
         content="Tự hào là Đối tác Cao Cấp đầu tiên của Google tại Việt Nam, cung cấp giải pháp Google Workspace cho hơn 200 doanh nghiệp đủ mọi quy mô và lĩnh vực. Với gần 15 năm kinh nghiệm và đội ngũ chuyên nghiệp, CleverAds sẽ giúp Quý doanh nghiệp chuyển đổi số công việc hiệu quả." />
     <meta name="twitter:site" content="@CleverAds">
@@ -30,13 +30,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- JS -->
 </head>
 
 <body>
     <nav class="navbar">
-        
-        <!--toggler-->
         <button class="toggler">
             <span class="line"></span>
             <span class="line"></span>
@@ -51,27 +52,13 @@
                 <li><a href="#bang-gia-dich-vu"> Bảng giá dịch vụ</a></li>
                 <li><a href="#tai-sao-chon-cleverads">Tại sao chọn CleverAds?</a></li>
                 <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
-                <li><a href="#" class="btn">Dùng thử miễn phí</a> <a href="#" class="btn">Hotline tư vấn</a></li>
+                <li><a href="#form_submit" class="btn">Dùng thử miễn phí</a> <a href="tel:0919018448" target="_blank"
+                        class="btn">Hotline tư vấn</a></li>
             </ul>
         </div>
     </nav>
-    <script>
-        const toggler = document.querySelector('.navbar > .toggler'),
-        navListContainer = document.querySelector('.navbar > .nav-list-container');
 
-        toggler.addEventListener(
-            "click",
-            () => {
-                //convert hamburger to close
-                toggler.classList.toggle('cross');
-                //make nav visible
-                navListContainer.classList.toggle('nav-active');
-            },
-            true
-        );
-
-    </script>
-    <section id="" class="box box-workspace">
+    <section id="top" class="box box-workspace">
         <header>
             <div class="container">
                 <a href="#"><img src="./imgs/clevergroup.png" alt=""></a>
@@ -83,12 +70,12 @@
             <div class="container">
                 <div class="box-group">
                     <h1 class="title">Google Workspace - Giải pháp tối ưu hóa quy trình làm việc cho doanh nghiệp</h1>
-                    <p class="desc">Tự hào là Đối tác cao cấp chính thức đầu tiên của Google tại Việt Nam, CleverAds
-                        hiện giúp 200+ khách hàng doanh nghiệp sử dụng hiệu quả bộ sản phẩm Google Workspace giúp nâng
-                        cao năng suất làm việc.</p>
+                    <p class="desc">CleverAds tự hào là Đối tác Cao cấp chính thức đầu tiên của Google tại Việt Nam,
+                        giúp 200+ khách hàng doanh nghiệp sử dụng hiệu quả bộ sản phẩm Google Workspace giúp nâng cao
+                        năng suất làm việc.</p>
                     <div class="btn-group" id="fixBtn">
-                        <a href="#" class="btn-success">Dùng thử miễn phí</a>
-                        <a href="#" class="btn-danger">Hotline tư vấn </a>
+                        <a href="#form_submit" class="btn-success">Dùng thử miễn phí</a>
+                        <a href="tel:0919018448" target="_blank" class="btn-danger">Hotline tư vấn </a>
                     </div>
                 </div>
                 <div class="fix-img">
@@ -220,14 +207,14 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
 
     <section id="tinh-nang-va-loi-ich" class="box box6">
         <div class="box-title">
-            <h3 class="title">TÍNH NĂNG VÀ LỢI ÍCH</h3>
+            <h3 class="title">LỢI ÍCH KHI SỬ DỤNG GOOGLE WORKSPACE</h3>
         </div>
         <div class="container">
             <div class="list2">
@@ -241,16 +228,15 @@
                     </div>
                 </div>
                 <div class="item reverse">
-                    <div class="img"><img src="./imgs/i_2.png" alt=""></div>
+                    <div class="img"><img src="./imgs/i_5.png" alt=""></div>
                     <div class="content">
-                        <h5 class="title">2. Tối ưu quy trình làm việc <br>
-                            nhanh chóng, hiệu quả, <br>
-                            tích hợp sẵn công cụ hữu ích</h5>
-                        <p class="desc">Đơn giản hóa công việc hàng ngày như lập hóa đơn, lập dự toán, lên lịch biểu và
-                            các tác vụ khác giúp người dùng dành nhiều thời gian hơn cho công việc quan trọng. Chuyển
-                            đổi dễ dàng giữa các ứng dụng mà không bị mất thông tin.</p>
+                        <h5 class="title">2. Chuyên nghiệp hoá doanh nghiệp <br>
+                            với tên miền và email riêng biệt</h5>
+                        <p class="desc">Địa chỉ email với tên miền là tên thương hiệu của doanh nghiệp thể hiện sự
+                            chuyên nghiệp của doanh nghiệp với khách hàng</p>
                     </div>
                 </div>
+
                 <div class="item">
                     <div class="img"><img src="./imgs/i_3.png" alt=""></div>
                     <div class="content">
@@ -268,38 +254,30 @@
     <section id="" class="box box6">
         <div class="container">
             <div class="list2">
-                <div class="item">
+                <div class="item reverse">
                     <div class="img"><img src="./imgs/i_4.png" alt=""></div>
                     <div class="content">
-                        <h5 class="title">4. Kết nối mọi lúc mọi nơi, <br>
-                            thích hợp mọi thiết bị</h5>
+                        <h5 class="title">4. KẾT NỐI MỌI LÚC MỌI NƠI, THÂN THIỆN <br>
+                            VỚI NGƯỜI DÙNG, THÍCH HỢP MỌI THIẾT BỊ</h5>
                         <p class="desc">Với Google Workspace, tất cả công việc của bạn đều tự động được lưu trong đám
                             mây. Truy cập vào email, lịch, tài liệu và trang web cũng như có thể yên tâm làm việc ở bất
                             kỳ đâu trên thế giới và trên bất cứ thiết bị nào khi có internet.</p>
                     </div>
                 </div>
-                <div class="item reverse">
-                    <div class="img"><img src="./imgs/i_5.png" alt=""></div>
-                    <div class="content">
-                        <h5 class="title">5. Chuyên nghiệp hoá doanh nghiệp <br>
-                            với tên miền và email riêng biệt</h5>
-                        <p class="desc">Địa chỉ email với tên miền là tên thương hiệu của doanh nghiệp thể hiện sự
-                            chuyên nghiệp của doanh nghiệp với khách hàng</p>
-                    </div>
-                </div>
                 <div class="item">
-                    <div class="img"><img src="./imgs/i_6.png" alt=""></div>
+                    <div class="img"><img src="./imgs/i_2.png" alt=""></div>
                     <div class="content">
-                        <h5 class="title">6. Giao diện thân thiện, <br>
-                            dễ sử dụng với người dùng</h5>
-                        <p class="desc">Giao diện đơn giản, ngắn gọn phù hợp với nhiều đối tượng người dùng trên nhiều
-                            thiết bị.</p>
+                        <h5 class="title">5. Tối ưu quy trình làm việc <br>
+                            nhanh chóng, hiệu quả</h5>
+                        <p class="desc">Đơn giản hóa công việc hàng ngày như lập hóa đơn, lập dự toán, lên lịch biểu và
+                            các tác vụ khác giúp người dùng dành nhiều thời gian hơn cho công việc quan trọng. Chuyển
+                            đổi dễ dàng giữa các ứng dụng mà không bị mất thông tin.</p>
                     </div>
                 </div>
                 <div class="item reverse">
                     <div class="img"><img src="./imgs/i_7.png" alt=""></div>
                     <div class="content">
-                        <h5 class="title">7. Đội ngũ tư vấn và <br>
+                        <h5 class="title">6. Đội ngũ tư vấn và <br>
                             hỗ trợ kỹ thuật chuyên nghiệp. </h5>
                         <p class="desc">Đội ngũ tư vấn 100% có chứng chỉ từ Google, được sát hạch và đào tạo hàng năm.
                         </p>
@@ -321,6 +299,7 @@
                         <p class="num">$3.00 USD</p>
                         <p class="price">$6 *</p>
                         <p class="desc">/người dùng/năm</p>
+                        <p class="desc2">* Đặc biệt giảm giá 50% cho 6 tháng đầu tiên sử dụng sản phẩm</p>
                         <a class="btn-c" href="#">Nhận tư vấn</a>
                     </div>
                     <ul>
@@ -347,6 +326,7 @@
                         <p class="num">$3.00 USD</p>
                         <p class="price">$12</p>
                         <p class="desc">/người dùng/năm</p>
+                        <p class="desc2">* Đặc biệt giảm giá 50% cho 6 tháng đầu tiên sử dụng sản phẩm</p>
                         <a class="btn-c" href="#">Nhận tư vấn</a>
                     </div>
                     <ul>
@@ -370,12 +350,13 @@
                     </ul>
                 </div>
                 <div class="item">
-                   
+
                     <div class="group-title">
                         <h4 class="title">Business Plus</h4>
                         <p class="num">$5.40 USD</p>
                         <div class="price">$18</div>
                         <p class="desc">/người dùng/năm</p>
+                        <p class="desc2">* Đặc biệt giảm giá 50% cho 6 tháng đầu tiên sử dụng sản phẩm</p>
                         <a class="btn-c" href="#">Nhận tư vấn</a>
                     </div>
                     <ul>
@@ -454,7 +435,7 @@
             </div>
         </div>
     </section>
-<!-- 
+    <!-- 
     <section id="" class="box box5">
         <div class="container">
             <div class="list">
@@ -523,6 +504,10 @@
                         <div class="form-group">
                             <input type="text" name="your_email" class="form-control" placeholder="Email">
                         </div>
+                        <div class="form-group">
+                            <input type="text" name="your_enterprise" class="form-control"
+                                placeholder="Tên doanh nghiệp">
+                        </div>
                         <div class="form-group form-btn">
                             <button type="submit" class="btn">Đăng ký ngay</button>
                         </div>
@@ -582,12 +567,14 @@
                 <h4 class="title">Liên hệ</h4>
                 <div class="list">
                     <ul>
-                        <li><strong>Trụ sở chính:</strong> Tầng 3 nhà G1, khu TTTM, tòa nhà Five Star Graden, số 2 Kim Giang, Phường Kim Giang, Quận Thanh Xuân, Hà Nội </li>
+                        <li><strong>Trụ sở chính:</strong> Tầng 3 nhà G1, khu TTTM, tòa nhà Five Star Graden, số 2 Kim
+                            Giang, Phường Kim Giang, Quận Thanh Xuân, Hà Nội </li>
                         <li><strong>Văn phòng Hồ Chí Minh:</strong> 27 Thăng Long, Phường 4, quận Tân Bình, TPHCM</li>
-                        <li><strong>Văn phòng Đà Nẵng:</strong> Tầng 6 Tòa nhà Thành Quân, 132-136 Lê Đình Lý, Thanh Khê, Đà Nẵng</li>
+                        <li><strong>Văn phòng Đà Nẵng:</strong> Tầng 6 Tòa nhà Thành Quân, 132-136 Lê Đình Lý, Thanh
+                            Khê, Đà Nẵng</li>
                     </ul>
                     <ul>
-                        <li><strong>HÀ NỘI (TRỤ SỞ CHÍNH):</strong>  +84 919 01 8448</li>
+                        <li><strong>HÀ NỘI (TRỤ SỞ CHÍNH):</strong> +84 919 01 8448</li>
                         <li><strong>HỒ CHÍ MINH:</strong> +84 919 02 8448</li>
                         <li><strong>ĐÀ NẴNG:</strong> +84 917 73 8448</li>
                     </ul>
@@ -598,13 +585,69 @@
             </div>
             <div class="copyright">
                 <h5>Bản quyền thuộc về CleverGroup © 2019 </h5>
-                <p>Mã số doanh nghiệp: 0102850165 do Sở Kế hoạch và Đầu Tư Thành phố Hà Nội cấp đăng ký lần đầu ngày 04/08/2008, cấp đăng ký thay đổi lần thứ 16 ngày 01/08/2019</p>
+                <p>Mã số doanh nghiệp: 0102850165 do Sở Kế hoạch và Đầu Tư Thành phố Hà Nội cấp đăng ký lần đầu ngày
+                    04/08/2008, cấp đăng ký thay đổi lần thứ 16 ngày 01/08/2019</p>
             </div>
         </div>
     </footer>
 
+    <ul class="fixed-icon">
+
+        <li>
+
+            <a href="javascript:;" style="text-decoration: none">
+
+                <i class="fas fa-phone"></i>
+
+            </a>
+
+            <ul class="list-phone">
 
 
+                <li><a style="text-decoration: none" href="tel:+84 919 01 8448">HÀ NỘI (TRỤ SỞ CHÍNH): +84 919 01
+                        8448</a></li>
+
+
+                <li><a style="text-decoration: none" href="tel:+84 919 02 8448">HỒ CHÍ MINH: +84 919 02 8448</a></li>
+
+
+                <li><a style="text-decoration: none" href="tel:+84 917 73 8448">ĐÀ NẴNG: +84 917 73 8448</a></li>
+
+
+                <li><a style="text-decoration: none" href="tel:+62 21 2234 5963">Indonesia: +62 21 2234 5963</a></li>
+
+
+            </ul>
+
+        </li>
+
+        <li>
+
+            <a href="https://www.facebook.com/cleverads" target="_blank" style="text-decoration: none">
+
+                <i class="fab fa-facebook-square"></i>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a data-fancybox data-src="#contact" href="#form_submit" style="text-decoration: none">
+
+                <i class="fas fa-envelope"></i>
+
+            </a>
+
+        </li>
+        <li>
+            <a href="#top" style="text-decoration: none;animation-duration: 1s;color: #c10100;">
+                <i class="fas fa-arrow-alt-circle-up"></i>
+            </a>
+
+        </li>
+
+    </ul>
 
     <script src="./libs/jquery-3.5.1.min.js"></script>
     <script src="./libs/easing/easing.min.js"></script>
@@ -619,7 +662,6 @@
             });
 
             var scroll_load = Math.floor($(window).scrollTop());
-            console.log('aa', scroll_load)
             if (scroll_load > 300) {
                 $('#fixBtn').addClass('sticky_scroll');
                 $(".navbar").addClass("show");
@@ -628,7 +670,6 @@
                 $(".navbar").removeClass("show");
             }
             $(window).scroll(function () {
-                console.log('scroll', scroll)
                 var scroll = Math.floor($(window).scrollTop());
                 if (scroll > 300) {
                     $('#fixBtn').addClass('sticky_scroll');
@@ -645,6 +686,7 @@
                 var your_name = $("input[name=your_name]").val();
                 var your_phone = $("input[name=your_phone]").val();
                 var your_email = $("input[name=your_email]").val();
+                var your_enterprise = $("input[name=your_enterprise]").val();
                 // var v = grecaptcha.getResponse();
 
                 var url = "https://script.google.com/macros/s/AKfycbxd_QSB1JRXstrJzYMaCnoQ7B-ABXMDB-KoFFweDx4Jp-uara8/exec";
@@ -652,10 +694,11 @@
                 var data = {
                     name: your_name,
                     phone: your_phone,
-                    email: your_email
+                    email: your_email,
+                    enterprise: your_enterprise,
                 };
                 // console.log(data);
-                if (your_name == '' || your_email == '' || your_phone == '') {
+                if (your_name == '' || your_email == '' || your_phone == '' || your_enterprise == '') {
                     $('.sign_up_for_a_quote_alert').html('<p class="text-danger alert alert-danger">You have not entered all the fields.</p>');
                 } else {
                     // $(".loading-img").css('display', 'inline-block');
@@ -685,6 +728,22 @@
                 }
             });
         });
+
+    </script>
+    <script>
+        const toggler = document.querySelector('.navbar > .toggler'),
+            navListContainer = document.querySelector('.navbar > .nav-list-container');
+
+        toggler.addEventListener(
+            "click",
+            () => {
+                //convert hamburger to close
+                toggler.classList.toggle('cross');
+                //make nav visible
+                navListContainer.classList.toggle('nav-active');
+            },
+            true
+        );
 
     </script>
 
