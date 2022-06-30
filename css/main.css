@@ -674,11 +674,27 @@ html, body {
 }
 .box.box1 .list .item {
   width: 435px;
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  -webkit-filter: drop-shadow(1px 0px 9px rgba(0, 0, 0, 0.33));
+          filter: drop-shadow(1px 0px 9px rgba(0, 0, 0, 0.33));
   border-radius: 8px;
-  padding: 40px;
+  padding: 46px 40px 40px;
   background: #fff;
+  position: relative;
+}
+.box.box1 .list .item:hover {
+  -webkit-filter: drop-shadow(1px 0px 9px rgba(229, 57, 52, 0.33));
+          filter: drop-shadow(1px 0px 9px rgba(229, 57, 52, 0.33));
+}
+.box.box1 .list .item .popular {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-transform: uppercase;
+  color: #e53934;
+  font-size: 16px;
+  font-weight: 500;
 }
 .box.box1 .list .item .group-title {
   text-align: center;
@@ -700,9 +716,15 @@ html, body {
   font-weight: 800;
   margin-bottom: 4px;
 }
+.box.box1 .list .item .group-title .price {
+  font-size: 27px;
+  letter-spacing: -1px;
+  color: #a7a7a7;
+  text-decoration: line-through;
+}
 .box.box1 .list .item .group-title .btn-c {
   margin-top: 8px;
-  border-radius: 6px;
+  border-radius: 12px;
   background-color: #2095f3;
   padding: 6px 12px;
   color: #fff;
@@ -719,6 +741,7 @@ html, body {
 .box.box1 .list .item ul li {
   -webkit-box-shadow: 0px 15px 10px -15px #555;
           box-shadow: 0px 15px 10px -15px #555;
+  font-weight: 500;
   height: 76px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1880,6 +1903,49 @@ html, body {
   .box.box-workspace .list .item {
     width: 100%;
   }
+}
+
+#footer {
+  background: url(./../imgs/bg6.png) no-repeat;
+  background-position: left;
+  background-size: cover;
+  padding: 80px 0;
+}
+#footer .content .title {
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: bold;
+}
+#footer .content .list {
+  padding-left: 40px;
+  padding-top: 40px;
+}
+#footer .content .list ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+#footer .content .list ul li {
+  font-size: 18px;
+  letter-spacing: -1px;
+  line-height: 24px;
+  color: #000000;
+}
+#footer .content .list ul:last-child {
+  margin-bottom: 0;
+}
+#footer .copyright {
+  padding-top: 40px;
+}
+#footer .copyright h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+#footer .copyright p {
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
 .sticky_scroll {

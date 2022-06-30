@@ -661,10 +661,24 @@ html, body {
             justify-content: space-between;
             .item {
                 width: 435px;
-                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                filter: drop-shadow(1px 0px 9px rgba(0,0,0,0.33));
                 border-radius: 8px;
-                padding: 40px;
+                padding: 46px 40px 40px;
                 background: #fff;
+                position: relative;
+                &:hover {
+                    filter: drop-shadow(1px 0px 9px rgba(229,57,52,0.33));
+                }
+                .popular {
+                    position: absolute;
+                    top: 12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-transform: uppercase;
+                    color: $red;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
                 .group-title {
                     text-align: center;
                     font-size: 15px;
@@ -684,12 +698,18 @@ html, body {
                         font-weight: 800;
                         margin-bottom: 4px;
                     }
+                    .price {
+                        font-size: 27px;
+                        letter-spacing: -1px;
+                        color: #a7a7a7;
+                        text-decoration: line-through;
+                    }
                     .desc {
                         
                     }
                     .btn-c {
                         margin-top: 8px;
-                        border-radius: 6px;
+                        border-radius: 12px;
                         background-color: $btn;
                         padding: 6px 12px;
                         color: #fff;
@@ -708,6 +728,7 @@ html, body {
                         &:last-child {
                             box-shadow: none;
                         }
+                        font-weight: 500;
                         height: 76px;
                         display: flex;
                         align-items: center;
@@ -1840,6 +1861,51 @@ html, body {
                     width: 100%;
                 }
             }
+        }
+    }
+}
+
+#footer {
+    background: url(./../imgs/bg6.png) no-repeat;
+    background-position: left;
+    background-size: cover;
+    padding: 80px 0;
+    .content {
+        .title {
+            font-size: 28px;
+            letter-spacing: -1px;
+            line-height: 24px;
+            color: #000000;
+            font-weight: bold;
+        }
+        .list {
+            padding-left: 40px;
+            padding-top: 40px;
+            ul {
+                list-style: none;
+                margin-bottom: 20px;
+                li {
+                    font-size: 18px;
+                    letter-spacing: -1px;
+                    line-height: 24px;
+                    color: #000000;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .copyright {
+        padding-top: 40px;
+        h5 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 0;
         }
     }
 }
