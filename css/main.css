@@ -1962,10 +1962,7 @@ html, body {
     margin-left: 0;
   }
   .box.box-workspace .box-content .fix-img {
-    right: 0;
-  }
-  .box.box-workspace .box-content .fix-img img {
-    width: 80px;
+    display: none;
   }
 }
 @media (max-width: 480px) {
@@ -2527,6 +2524,7 @@ ul.fixed-icon {
   right: 15px;
   bottom: 120px;
   list-style: none;
+  z-index: 9999999;
 }
 
 ul.fixed-icon > li {

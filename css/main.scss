@@ -1874,10 +1874,7 @@ html, body {
                     }
                 }
                 .fix-img {
-                    right: 0;
-                    img {
-                        width: 80px;
-                    }
+                    display: none;
                 }
             }
             @media (max-width: 480px) {
