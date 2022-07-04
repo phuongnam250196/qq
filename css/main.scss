@@ -2448,6 +2448,7 @@ ul.fixed-icon {
     right: 15px;
     bottom: 120px;
     list-style: none;
+    z-index: 9999999;
   }
   
   ul.fixed-icon > li {
